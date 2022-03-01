@@ -24,8 +24,8 @@ const CarDocuments = () => {
                 onFileChange={(files) => onFileChange(files)}
             />
         </div>
-      <div className='container'>
-        <p> مدارک خودرو برگ سبز، کارت خودرو،بیمه شخص ثالث و کارت معاینه فنی بارگذاری شود </p>
+      <div>
+        <p className='text-center'> مدارک خودرو برگ سبز، کارت خودرو،بیمه شخص ثالث و کارت معاینه فنی بارگذاری شود </p>
       </div>
     </div>
   )
