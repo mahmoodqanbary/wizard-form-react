@@ -1,8 +1,12 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import { StepperContext } from '../../contexts/StepperContext'
+import  DtPicker  from 'react-calendar-datetime-picker'
+import 'react-calendar-datetime-picker/dist/index.css'
+import './App.css'
 
 const PersonalInfo = () => {
   const {userData, setUserData} = useContext(StepperContext);
+  const [date, setDate] = useState(null)
   const handleChange = (e) => {
     const {name, value} = e.target;
     setUserData({...userData, [name]: value})
@@ -50,8 +54,6 @@ const PersonalInfo = () => {
        appearance-none outline-none w-full text-gray-800' />
       </div>
       </div>
-
-
       <div className='w-full mx-2 '>
       <div className='font-bold h-6 mt-3 text-gray-500 text-xs leading-8 uppercase'>
         تاریخ تولد
@@ -60,7 +62,7 @@ const PersonalInfo = () => {
       <input onChange={handleChange}
       value={userData["birthday"] || ""}
       name="birthday"
-      placeholder=''
+      placeholder='روز/ماه/سال'
       className='p-1 px2
        appearance-none outline-none w-full text-gray-800' />
       </div>
@@ -158,6 +160,3 @@ const PersonalInfo = () => {
 }
 
 export default PersonalInfo
-
-
-

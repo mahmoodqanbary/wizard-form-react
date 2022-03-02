@@ -3,6 +3,8 @@ import { StepperContext } from '../../contexts/StepperContext'
 import DropFileInput from '../drop-file-input/DropFileInput';
 import './App.css'
 
+
+
 const PersonalDocuments = () => {
   const {userData, setUserData} = useContext(StepperContext);
   const handleChange = (e) => {

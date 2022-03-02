@@ -10,7 +10,10 @@
     --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-
+@font-face {
+    font-family: diploma;
+    src: url('../../../public/diplomat.ttf');
+  }
 
 
 
@@ -24,4 +27,90 @@
 .header {
     margin-bottom: 30px;
     text-align: center;
+}
+
+.datePicker{
+    margin-top: 4.5px;
+    margin-bottom: 4.5px;
+    border: none;
+  
+  
+    
+}
+
+.showCalender{
+    position: absolute;
+    bottom: 0;
+      
+}
+
+.bg-img{
+    background-image: url('../../../public/bg.jpg');
+    width: 500px;
+    height: 700px;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    margin: 0 auto;
+}
+
+
+.btn-center{
+    margin: 0 auto;
+}
+
+.info-1{
+    position: absolute;
+    top: 221px;
+    right: 133px;
+    font-size: .87rem;
+}
+.info-2{
+    position: absolute;
+    top: 222px;
+    right: 320px;
+    font-size: .75rem;
+}
+.info-3{
+    position: absolute;
+    top: 249px;
+    right: 133px;
+    font-size: .75rem;
+}
+.info-4{
+    position: absolute;
+    top: 249px;
+    right: 320px;
+    font-size: .75rem;
+}
+
+.info-5{
+    position: absolute;
+    top: 277px;
+    right: 133px;
+    font-size: .75rem;
+}
+
+.info-6{
+    position: absolute;
+    top: 277px;
+    right: 320px;
+    font-size: .75rem;
+}
+.info-7{
+    position: absolute;
+    top: 306px;
+    right: 133px;
+    font-size: .75rem;
+}
+.info-8{
+    position: absolute;
+    top: 331px;
+    right: 101px;
+    font-size: .75rem;
+}
+
+.font-info{
+    font-family: diploma;
 }
