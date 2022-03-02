@@ -9,9 +9,9 @@ const Stepper = ({steps, currentStep}) => {
     const newSteps = [...steps]
     let count =0;
 
-    while (count < newStep.length){
+    while (count < newSteps.length){
       //current step
-      if(count === stepNumber){
+      if(count == stepNumber){
         newSteps[count] = {
           ...newSteps[count],
           highlighted: true,
@@ -59,7 +59,7 @@ const Stepper = ({steps, currentStep}) => {
     })
     );
     stepRef.current = stepsState;
-    const current = updateStep(currentStep-1, stepRef.current);
+    const current = updateStep(currentStep -1, stepRef.current);
     setNewStep(current);
   },[steps, currentStep])
   const displaySteps = newStep.map((step, index)=>  {

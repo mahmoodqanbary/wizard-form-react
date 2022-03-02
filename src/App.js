@@ -41,7 +41,7 @@ const App = () => {
   const handleClick = (direction)=>{
     let newStep = currentStep;
 
-    direction === "next" ? newStep++ : newStep--;
+    direction === "next"? newStep++ : newStep--;
 
     newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
   }
