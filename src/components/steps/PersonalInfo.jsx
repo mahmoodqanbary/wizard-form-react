@@ -3,9 +3,12 @@ import { StepperContext } from '../../contexts/StepperContext'
 import  DtPicker  from 'react-calendar-datetime-picker'
 import 'react-calendar-datetime-picker/dist/index.css'
 import './App.css'
+import "react-modern-calendar-datepicker/lib/DatePicker.css";
+import DatePicker from "react-modern-calendar-datepicker";
 
 const PersonalInfo = () => {
   const {userData, setUserData} = useContext(StepperContext);
+  const {selectedDay, setSelectedDay} = useContext(StepperContext);
   const [date, setDate] = useState(null)
   const handleChange = (e) => {
     const {name, value} = e.target;
@@ -59,12 +62,22 @@ const PersonalInfo = () => {
         تاریخ تولد
       </div>
       <div className='bg-white my-2 p-1 flex border border-gray-200 rounded'>
-      <input onChange={handleChange}
+      {/* <input onChange={handleChange}
       value={userData["birthday"] || ""}
       name="birthday"
       placeholder='روز/ماه/سال'
       className='p-1 px2
-       appearance-none outline-none w-full text-gray-800' />
+       appearance-none outline-none w-full text-gray-800' /> */}
+       <DatePicker
+      value={userData.birthday}
+      onChange={(date) => {
+        setUserData({...userData, ['birthday']: date})
+      }}
+      calendarPopperPosition="bottom"
+      inputPlaceholder="Select a day"
+      locale="fa"
+      shouldHighlightWeekends
+    />
       </div>
       </div>
 
@@ -106,6 +119,8 @@ const PersonalInfo = () => {
       value={userData["idcardnumber"] || ""}
       name="idcardnumber"
       placeholder=''
+      type="number"
+      maxlength="10"
       className='p-1 px2
        appearance-none outline-none w-full text-gray-800' />
       </div>
