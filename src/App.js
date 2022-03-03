@@ -62,7 +62,9 @@ const App = () => {
           userData,
           setUserData,
           finalData,
-          setFinalData
+          setFinalData,
+          selectedDay,
+          setSelectedDay,
         }}>
           {displayStep(currentStep)}
         </StepperContext.Provider>
