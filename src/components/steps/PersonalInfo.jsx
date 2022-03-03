@@ -65,12 +65,6 @@ const PersonalInfo = () => {
         تاریخ تولد
       </div>
       <div className='bg-white my-2 p-1 flex border border-gray-200 rounded'>
-      {/* <input onChange={handleChange}
-      value={userData["birthday"] || ""}
-      name="birthday"
-      placeholder='روز/ماه/سال'
-      className='p-1 px2
-       appearance-none outline-none w-full text-gray-800' /> */}
        <DatePicker
       value={userData.birthday}
       onChange={(date) => {
@@ -80,7 +74,7 @@ const PersonalInfo = () => {
       inputPlaceholder="انتخاب کنید"
       locale="fa"
       shouldHighlightWeekends
-      
+      inputClassName='my-custom-input responsive-calendar'
      
     />
       </div>

@@ -134,3 +134,39 @@ input::-webkit-inner-spin-button {
 /* input[type=number] {
   -moz-appearance: textfield;
 } */
+
+.my-custom-input{
+    border: none !important;
+  
+
+}
+
+.responsive-calendar {
+    /* by setting font-size, all the elements will correspond */
+    font-size: 14px !important; /* default to 10px */
+  }
+  
+  @media (max-width: 1500px) {
+    .responsive-calendar {
+      font-size: 11px !important;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .responsive-calendar {
+      font-size: 9px !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .responsive-calendar {
+      font-size: 8px !important;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 2500px) {
+    .responsive-calendar {
+      font-size: 12px !important;
+    }
+  }
