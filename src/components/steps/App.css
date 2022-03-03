@@ -49,10 +49,18 @@
     width: 500px;
     height: 700px;
     background-repeat: no-repeat;
+    background-size: contain;
     position: relative;
     overflow: hidden;
     background-position: center;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .bg-img {
+    width: auto;
+    height: auto;
+  }
 }
 
 
@@ -113,4 +121,16 @@
 
 .font-info{
     font-family: diploma;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

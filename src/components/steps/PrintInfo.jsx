@@ -20,7 +20,7 @@ const PrintInfo = () => {
           <div className="font-info">
             <span className="info-1">{userData.name} {userData.lastname}</span>
             <span className="info-2">{userData.fathername}</span>
-            <span className="info-3">{userData.birthday}</span>
+            {userData.birthday && <span className="info-3">{`${userData.birthday.year}/${userData.birthday.month}/${userData.birthday.day}`}</span>}
             <span className="info-4">{userData.issuance}</span>
             <span className="info-5">{userData.idnumber}</span>
             <span className="info-6">{userData.idcardnumber}</span>
