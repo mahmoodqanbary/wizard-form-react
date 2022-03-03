@@ -6,6 +6,7 @@ import './App.css'
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import DatePicker from "react-modern-calendar-datepicker";
 
+
 const PersonalInfo = () => {
   const {userData, setUserData} = useContext(StepperContext);
   const {selectedDay, setSelectedDay} = useContext(StepperContext);
@@ -14,6 +15,8 @@ const PersonalInfo = () => {
     const {name, value} = e.target;
     setUserData({...userData, [name]: value})
   }
+
+
   return (
     <div className='grid grid-cols-3 gap-2'>
       <div className='w-full mx-2 '>
@@ -74,9 +77,11 @@ const PersonalInfo = () => {
         setUserData({...userData, ['birthday']: date})
       }}
       calendarPopperPosition="bottom"
-      inputPlaceholder="Select a day"
+      inputPlaceholder="انتخاب کنید"
       locale="fa"
       shouldHighlightWeekends
+      
+     
     />
       </div>
       </div>
@@ -119,8 +124,9 @@ const PersonalInfo = () => {
       value={userData["idcardnumber"] || ""}
       name="idcardnumber"
       placeholder=''
-      type="number"
-      maxlength="10"
+      type='text'
+     
+      maxLength="10"
       className='p-1 px2
        appearance-none outline-none w-full text-gray-800' />
       </div>
@@ -135,6 +141,7 @@ const PersonalInfo = () => {
       value={userData["phonenumber"] || ""}
       name="phonenumber"
       placeholder=''
+      maxLength="11"
       className='p-1 px2
        appearance-none outline-none w-full text-gray-800' />
       </div>
@@ -149,6 +156,7 @@ const PersonalInfo = () => {
       value={userData["postcard"] || ""}
       name="postcard"
       placeholder=''
+      maxLength="10"
       className='p-1 px2
        appearance-none outline-none w-full text-gray-800' />
       </div>

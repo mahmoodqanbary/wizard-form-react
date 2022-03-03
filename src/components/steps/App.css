@@ -82,9 +82,9 @@
 }
 .info-3{
     position: absolute;
-    top: 249px;
-    right: 133px;
-    font-size: .75rem;
+    top: 251px;
+    right: 108px;
+    font-size: .80rem;
 }
 .info-4{
     position: absolute;
@@ -124,13 +124,13 @@
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 
 /* Firefox */
-input[type=number] {
+/* input[type=number] {
   -moz-appearance: textfield;
-}
+} */
